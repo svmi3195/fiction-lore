@@ -1,0 +1,33 @@
+{
+  "countries": [
+    {
+      "name": "",
+      "ruler": "",
+      "borders": [],
+      "imports": "",
+      "exports": ""
+    }
+  ],
+  "bestiary": [
+    {
+      "name": "",
+      "areal": [],
+      "description": ""
+    }
+  ],
+  "characters": [
+    {
+      "name": "",
+      "age": "",
+      "origins": "",
+      "looks": [
+        {
+          "hints": "Eye, hair, skin color; height and weight; scars, tattoos"
+        },
+        {
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
