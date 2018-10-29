@@ -11,6 +11,7 @@ window.document.getElementById('countries').addEventListener('click', function (
     list.append(listItem);
   });
 
+  container.innerHTML = '';
   container.append(list);
 });
 
@@ -24,6 +25,7 @@ window.document.getElementById('bestiary').addEventListener('click', function ()
     list.append(listItem);
   });
 
+  container.innerHTML = '';
   container.append(list);
 });
 
@@ -37,6 +39,7 @@ window.document.getElementById('characters').addEventListener('click', function 
     list.append(listItem);
   });
 
+  container.innerHTML = '';
   container.append(list);
 });
 
