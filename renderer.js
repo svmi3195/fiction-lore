@@ -6,7 +6,9 @@ window.document.getElementById('countries').addEventListener('click', function (
   const list = window.document.createElement('ul');
 
   data.countries.forEach(element => {
-    list.append(window.document.createElement('li').innerText = element.name)
+    let listItem = window.document.createElement('li');
+    listItem.innerText = element.name;
+    list.append(listItem);
   });
 
   container.append(list);
@@ -17,7 +19,9 @@ window.document.getElementById('bestiary').addEventListener('click', function ()
   const list = window.document.createElement('ul');
 
   data.bestiary.forEach(element => {
-    list.append(window.document.createElement('li').innerText = element.name)
+    let listItem = window.document.createElement('li');
+    listItem.innerText = element.name;
+    list.append(listItem);
   });
 
   container.append(list);
@@ -28,7 +32,9 @@ window.document.getElementById('characters').addEventListener('click', function 
   const list = window.document.createElement('ul');
 
   data.characters.forEach(element => {
-    list.append(window.document.createElement('li').innerText = element.name)
+    let listItem = window.document.createElement('li');
+    listItem.innerText = element.name;
+    list.append(listItem);
   });
 
   container.append(list);
