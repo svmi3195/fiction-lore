@@ -18,7 +18,12 @@ function createList(dataArray){
 
   dataArray.forEach(element => {
     let listItem = window.document.createElement('li');
-    listItem.innerText = element.name;
+    let btn = window.document.createElement('button');
+    btn.innerText = element.name;
+    btn.addEventListener('click', function () {
+      console.log(element)
+    })
+    listItem.append(btn)
     list.append(listItem);
   });
 
