@@ -35,12 +35,20 @@ function createItem(category, element){
   const container = window.document.getElementById('main');
   const template = window.document.createElement('div');
 
+  const title = window.document.createElement('h1');
+  title.innerText = element.name;
+  template.append(title);
+
+  const description = window.document.createElement('p');
+  description.innerText = element.description;
+  template.append(description);
+
   if(category == 'countries'){
-    template.innerText = 'country';
+    
   }else if(category == 'bestiary'){
-    template.innerText = 'creature';
+    
   }else if(category == 'characters'){
-    template.innerText = 'charater';
+    
   }
 
   container.innerHTML = '';

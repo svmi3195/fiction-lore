@@ -2,6 +2,7 @@
   "countries": [
     {
       "name": "",
+      "description": "",
       "ruler": "",
       "borders": [],
       "imports": "",
@@ -18,6 +19,7 @@
   "characters": [
     {
       "name": "",
+      "description": "",
       "age": "",
       "origins": "",
       "looks": [
