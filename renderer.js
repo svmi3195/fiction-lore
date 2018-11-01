@@ -21,7 +21,7 @@ function createList(category){
     let btn = window.document.createElement('button');
     btn.innerText = element.name;
     btn.addEventListener('click', function () {
-      console.log(element)
+      createItem(category, element);
     })
     listItem.append(btn)
     list.append(listItem);
@@ -31,3 +31,18 @@ function createList(category){
   container.append(list);
 }
 
+function createItem(category, element){
+  const container = window.document.getElementById('main');
+  const template = window.document.createElement('div');
+
+  if(category == 'countries'){
+    template.innerText = 'country';
+  }else if(category == 'bestiary'){
+    template.innerText = 'creature';
+  }else if(category == 'characters'){
+    template.innerText = 'charater';
+  }
+
+  container.innerHTML = '';
+  container.append(template);
+}
