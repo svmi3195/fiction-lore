@@ -47,6 +47,15 @@ function createItem(category, element){
     const ruler = window.document.createElement('p');
     ruler.innerHTML = '<strong>Ruler: </strong>' + element.ruler;
     template.append(ruler);
+
+    const borders = window.document.createElement('p');
+    let bordersString = '<strong>Borders with: </strong>';    
+    element.borders.forEach(function(item){
+      bordersString += item + ', '
+    })
+    bordersString = bordersString.slice(0, bordersString.length - 2);
+    borders.innerHTML = bordersString;
+    template.append(borders);
   }else if(category == 'bestiary'){
     
   }else if(category == 'characters'){
