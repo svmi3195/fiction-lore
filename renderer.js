@@ -57,7 +57,9 @@ function createItem(category, element){
     borders.innerHTML = bordersString;
     template.append(borders);
   }else if(category == 'bestiary'){
-    
+    const areal = window.document.createElement('p');
+    areal.innerHTML = '<strong>Lives in: </strong>' + element.areal;
+    template.append(areal);
   }else if(category == 'characters'){
     
   }
