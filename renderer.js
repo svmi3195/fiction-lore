@@ -61,7 +61,9 @@ function createItem(category, element){
     areal.innerHTML = '<strong>Lives in: </strong>' + element.areal;
     template.append(areal);
   }else if(category == 'characters'){
-    
+    const age = window.document.createElement('p');
+    age.innerHTML = '<strong>Age: </strong>' + element.age;
+    template.append(age);
   }
 
   container.innerHTML = '';
