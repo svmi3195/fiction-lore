@@ -44,7 +44,9 @@ function createItem(category, element){
   template.append(description);
 
   if(category == 'countries'){
-    
+    const ruler = window.document.createElement('p');
+    ruler.innerHTML = '<strong>Ruler: </strong>' + element.ruler;
+    template.append(ruler);
   }else if(category == 'bestiary'){
     
   }else if(category == 'characters'){
