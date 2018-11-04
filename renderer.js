@@ -1,5 +1,17 @@
 const data = require('./data1/index.json')
 
+let lang = 'en';
+
+window.document.getElementById('lang').addEventListener('click', function () {
+  if(lang == 'en'){
+    lang = 'ru';
+    window.document.getElementById('lang').innerHTML = 'Language: RU';
+  }else if(lang = 'ru'){
+    lang = 'en';
+    window.document.getElementById('lang').innerHTML = 'Language: EN';
+  }
+});
+
 window.document.getElementById('countries').addEventListener('click', function () {
   createList('countries');
 });
