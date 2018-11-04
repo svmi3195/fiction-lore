@@ -64,6 +64,10 @@ function createItem(category, element){
     const age = window.document.createElement('p');
     age.innerHTML = '<strong>Age: </strong>' + element.age;
     template.append(age);
+
+    const parents = window.document.createElement('p');
+    parents.innerHTML = '<strong>Parents: </strong>' + element.parents;
+    template.append(parents);
   }
 
   container.innerHTML = '';
