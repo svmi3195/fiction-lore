@@ -1,4 +1,8 @@
 {
+  "language": {
+    "en": "Language",
+    "ru": "Язык"
+  },
   "countries": {
     "en": "Countries",
     "ru": "Страны"

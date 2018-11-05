@@ -6,14 +6,15 @@ let lang = 'en';
 window.document.getElementById('lang').addEventListener('click', function () {
   if(lang == 'en'){
     lang = 'ru';
-    window.document.getElementById('lang').innerHTML = 'Language: RU';
   }else if(lang = 'ru'){
     lang = 'en';
-    window.document.getElementById('lang').innerHTML = 'Language: EN';
   }
+
   window.document.getElementById('countries').innerHTML = loc.countries[lang];
   window.document.getElementById('bestiary').innerHTML = loc.bestiary[lang];
   window.document.getElementById('characters').innerHTML = loc.characters[lang];
+
+  window.document.getElementById('lang').innerHTML = loc.language[lang] + ': '+ lang.toUpperCase();
 });
 
 window.document.getElementById('countries').addEventListener('click', function () {
