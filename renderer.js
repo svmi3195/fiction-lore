@@ -11,6 +11,9 @@ window.document.getElementById('lang').addEventListener('click', function () {
     lang = 'en';
     window.document.getElementById('lang').innerHTML = 'Language: EN';
   }
+  window.document.getElementById('countries').innerHTML = loc.countries[lang];
+  window.document.getElementById('bestiary').innerHTML = loc.bestiary[lang];
+  window.document.getElementById('characters').innerHTML = loc.characters[lang];
 });
 
 window.document.getElementById('countries').addEventListener('click', function () {
