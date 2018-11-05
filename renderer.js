@@ -1,4 +1,5 @@
 const data = require('./data1/index.json')
+const loc = require('./data/loc.json')
 
 let lang = 'en';
 
@@ -57,11 +58,11 @@ function createItem(category, element){
 
   if(category == 'countries'){
     const ruler = window.document.createElement('p');
-    ruler.innerHTML = '<strong>Ruler: </strong>' + element.ruler;
+    ruler.innerHTML = formatTitle('ruler') + element.ruler;
     template.append(ruler);
 
     const borders = window.document.createElement('p');
-    let bordersString = '<strong>Borders with: </strong>';    
+    let bordersString = formatTitle('bordersWith');    
     element.borders.forEach(function(item){
       bordersString += item + ', '
     })
@@ -70,18 +71,22 @@ function createItem(category, element){
     template.append(borders);
   }else if(category == 'bestiary'){
     const areal = window.document.createElement('p');
-    areal.innerHTML = '<strong>Lives in: </strong>' + element.areal;
+    areal.innerHTML = formatTitle('livesIn') + element.areal;
     template.append(areal);
   }else if(category == 'characters'){
     const age = window.document.createElement('p');
-    age.innerHTML = '<strong>Age: </strong>' + element.age;
+    age.innerHTML = formatTitle('age') + element.age;
     template.append(age);
 
     const parents = window.document.createElement('p');
-    parents.innerHTML = '<strong>Parents: </strong>' + element.parents;
+    parents.innerHTML = formatTitle('parents') + element.parents;
     template.append(parents);
   }
 
   container.innerHTML = '';
   container.append(template);
+}
+
+function formatTitle(title){
+  return '<strong>' + loc[title][lang] + ': </strong>'
 }

@@ -1,0 +1,34 @@
+{
+  "countries": {
+    "en": "Countries",
+    "ru": "Страны"
+  },
+  "bestiary": {
+    "en": "Bestiary",
+    "ru": "Бестиарий"
+  },
+  "characters": {
+    "en": "Characters",
+    "ru": "Персонажи"
+  },
+  "ruler": {
+    "en": "Ruler",
+    "ru": "Правитель"
+  },
+  "bordersWith": {
+    "en": "Borders with",
+    "ru": "Граничит с"
+  },
+  "livesIn": {
+    "en": "Lives in",
+    "ru": "Обитает в"
+  },
+  "age": {
+    "en": "Age",
+    "ru": "Возраст"
+  },
+  "parents": {
+    "en": "Parents",
+    "ru": "Родители"
+  }
+}

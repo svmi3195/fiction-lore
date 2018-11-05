@@ -1,1 +1,0 @@
-exports.testing = function(){console.log('testing')}
