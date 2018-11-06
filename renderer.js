@@ -85,6 +85,10 @@ function createItem(category, element){
     const parents = window.document.createElement('p');
     parents.innerHTML = formatTitle('parents') + element.parents;
     template.append(parents);
+
+    const looks = window.document.createElement('p');
+    looks.innerHTML = formatTitle('looks') + element.looks.description;
+    template.append(looks);
   }
 
   container.innerHTML = '';

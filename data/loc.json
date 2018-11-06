@@ -34,5 +34,9 @@
   "parents": {
     "en": "Parents",
     "ru": "Родители"
+  },
+  "looks": {
+    "en": "Looks",
+    "ru": "Внешность"
   }
 }
