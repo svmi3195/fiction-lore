@@ -19,6 +19,10 @@
     "en": "Ruler",
     "ru": "Правитель"
   },
+  "towns": {
+    "en": "Towns",
+    "ru": "Города"
+  },
   "bordersWith": {
     "en": "Borders with",
     "ru": "Граничит с"
