@@ -3,7 +3,8 @@
     {
       "name": "",
       "description": "",
-      "towns": "",
+      "towns": [],
+      "waters": [],
       "ruler": "",
       "borders": [],
       "imports": "",

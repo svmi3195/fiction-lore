@@ -23,6 +23,10 @@
     "en": "Towns",
     "ru": "Города"
   },
+  "waters": {
+    "en": "Lakes and rivers",
+    "ru": "Реки и озера"
+  },
   "bordersWith": {
     "en": "Borders with",
     "ru": "Граничит с"

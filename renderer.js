@@ -82,6 +82,15 @@ function createItem(category, element){
     townsString = townsString.slice(0, townsString.length - 2);
     towns.innerHTML = townsString;
     template.append(towns);
+
+    const waters = window.document.createElement('p');
+    let watersString = formatTitle('waters');    
+    element.waters.forEach(function(item){
+      watersString += item + ', '
+    })
+    watersString = watersString.slice(0, watersString.length - 2);
+    waters.innerHTML = watersString;
+    template.append(waters);
   }else if(category == 'bestiary'){
     const areal = window.document.createElement('p');
     areal.innerHTML = formatTitle('livesIn') + element.areal;
