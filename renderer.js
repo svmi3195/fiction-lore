@@ -91,6 +91,24 @@ function createItem(category, element){
     watersString = watersString.slice(0, watersString.length - 2);
     waters.innerHTML = watersString;
     template.append(waters);
+
+    const mountains = window.document.createElement('p');
+    let mountainsString = formatTitle('mountains');    
+    element.mountains.forEach(function(item){
+      mountainsString += item + ', '
+    })
+    mountainsString = mountainsString.slice(0, mountainsString.length - 2);
+    mountains.innerHTML = mountainsString;
+    template.append(mountains);
+
+    const forests = window.document.createElement('p');
+    let forestsString = formatTitle('forests');    
+    element.forests.forEach(function(item){
+      forestsString += item + ', '
+    })
+    forestsString = forestsString.slice(0, forestsString.length - 2);
+    forests.innerHTML = forestsString;
+    template.append(forests);
   }else if(category == 'bestiary'){
     const areal = window.document.createElement('p');
     areal.innerHTML = formatTitle('livesIn') + element.areal;

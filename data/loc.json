@@ -23,6 +23,14 @@
     "en": "Towns",
     "ru": "Города"
   },
+  "mountains": {
+    "en": "Mountains",
+    "ru": "Горы"
+  },
+  "forests": {
+    "en": "Forests",
+    "ru": "Леса"
+  },
   "waters": {
     "en": "Lakes and rivers",
     "ru": "Реки и озера"
