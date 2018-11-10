@@ -66,47 +66,27 @@ function createItem(category, element){
     template.append(ruler);
 
     const borders = window.document.createElement('p');
-    let bordersString = formatTitle('bordersWith');    
-    element.borders.forEach(function(item){
-      bordersString += item + ', '
-    })
-    bordersString = bordersString.slice(0, bordersString.length - 2);
+    let bordersString = formatTitle('bordersWith') + formatList(element, 'borders');
     borders.innerHTML = bordersString;
     template.append(borders);
 
     const towns = window.document.createElement('p');
-    let townsString = formatTitle('towns');    
-    element.towns.forEach(function(item){
-      townsString += item + ', '
-    })
-    townsString = townsString.slice(0, townsString.length - 2);
+    let townsString = formatTitle('towns') + formatList(element, 'towns');
     towns.innerHTML = townsString;
     template.append(towns);
 
     const waters = window.document.createElement('p');
-    let watersString = formatTitle('waters');    
-    element.waters.forEach(function(item){
-      watersString += item + ', '
-    })
-    watersString = watersString.slice(0, watersString.length - 2);
+    let watersString = formatTitle('waters') + formatList(element, 'waters');
     waters.innerHTML = watersString;
     template.append(waters);
 
     const mountains = window.document.createElement('p');
-    let mountainsString = formatTitle('mountains');    
-    element.mountains.forEach(function(item){
-      mountainsString += item + ', '
-    })
-    mountainsString = mountainsString.slice(0, mountainsString.length - 2);
+    let mountainsString = formatTitle('mountains') + formatList(element, 'mountains');   
     mountains.innerHTML = mountainsString;
     template.append(mountains);
 
     const forests = window.document.createElement('p');
-    let forestsString = formatTitle('forests');    
-    element.forests.forEach(function(item){
-      forestsString += item + ', '
-    })
-    forestsString = forestsString.slice(0, forestsString.length - 2);
+    let forestsString = formatTitle('forests') + formatList(element, 'forests');
     forests.innerHTML = forestsString;
     template.append(forests);
   }else if(category == 'bestiary'){
@@ -133,4 +113,13 @@ function createItem(category, element){
 
 function formatTitle(title){
   return '<strong>' + loc[title][lang] + ': </strong>'
+}
+
+function formatList(element, title){
+    let string = '';  
+    element[title].forEach(function(item){
+      string += item + ', '
+    })
+    string = string.slice(0, string.length - 2);
+    return string;
 }
