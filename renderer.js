@@ -19,15 +19,25 @@ window.document.getElementById('lang').addEventListener('click', function () {
 
 window.document.getElementById('countries').addEventListener('click', function () {
   createList('countries');
+  createAddBtn('countries');
 });
 
 window.document.getElementById('bestiary').addEventListener('click', function () {
   createList('bestiary');
+  createAddBtn('bestiary');
 });
 
 window.document.getElementById('characters').addEventListener('click', function () {
   createList('characters');
+  createAddBtn('characters');
 });
+
+function createAddBtn(category){
+  const btn = window.document.createElement('button');
+  btn.className = 'add-btn';
+  btn.innerHTML = 'Add';
+  window.document.getElementById('main').append(btn);
+}
 
 function createList(category){
   const container = window.document.getElementById('main');
