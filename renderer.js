@@ -49,6 +49,13 @@ function createDeleteBtn(category){
   window.document.getElementById('main').append(btn);
 }
 
+function createEditBtn(category){
+  const btn = window.document.createElement('button');
+  btn.className = 'edit-btn';
+  btn.innerHTML = 'Edit';
+  return btn;
+}
+
 function createList(category){
   const container = window.document.getElementById('main');
   const list = window.document.createElement('ul');
@@ -128,6 +135,7 @@ function createItem(category, element){
   }
 
   container.innerHTML = '';
+  container.append(createEditBtn());
   container.append(template);
 }
 
