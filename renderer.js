@@ -19,34 +19,28 @@ window.document.getElementById('lang').addEventListener('click', function () {
 
 window.document.getElementById('countries').addEventListener('click', function () {
   createList('countries');
-  createAddBtn('countries');
-  createDeleteBtn('countries');
 });
 
 window.document.getElementById('bestiary').addEventListener('click', function () {
   createList('bestiary');
-  createAddBtn('bestiary');
-  createDeleteBtn('countries');
 });
 
 window.document.getElementById('characters').addEventListener('click', function () {
   createList('characters');
-  createAddBtn('characters');
-  createDeleteBtn('countries');
 });
 
 function createAddBtn(category){
   const btn = window.document.createElement('button');
   btn.className = 'add-btn';
   btn.innerHTML = 'Add';
-  window.document.getElementById('main').append(btn);
+  return btn;
 }
 
 function createDeleteBtn(category){
   const btn = window.document.createElement('button');
   btn.className = 'delete-btn';
   btn.innerHTML = 'Delete';
-  window.document.getElementById('main').append(btn);
+  return btn;
 }
 
 function createEditBtn(category){
@@ -72,12 +66,18 @@ function createList(category){
   });
 
   container.innerHTML = '';
+
+  const listMenu = window.document.createElement('div');
+  listMenu.append(createAddBtn(category));
+  listMenu.append(createDeleteBtn(category));
+
+  container.append(listMenu);
   container.append(list);
 }
 
 function createItem(category, element){
   const container = window.document.getElementById('main');
-  const template = window.document.createElement('div');
+  const template = window.document.createElement('div');  
 
   const title = window.document.createElement('h1');
   title.innerText = element.name;
