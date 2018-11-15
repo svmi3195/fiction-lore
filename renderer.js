@@ -67,12 +67,13 @@ function createList(category){
 
   container.innerHTML = '';
 
+  container.append(list);
+
   const listMenu = window.document.createElement('div');
+  listMenu.className = 'list-menu';
   listMenu.append(createAddBtn(category));
   listMenu.append(createDeleteBtn(category));
-
-  container.append(listMenu);
-  container.append(list);
+  container.append(listMenu);  
 }
 
 function createItem(category, element){
@@ -135,8 +136,12 @@ function createItem(category, element){
   }
 
   container.innerHTML = '';
-  container.append(createEditBtn());
   container.append(template);
+
+  const listMenu = window.document.createElement('div');
+  listMenu.className = 'list-menu';
+  listMenu.append(createEditBtn());
+  container.append(listMenu);
 }
 
 function formatTitle(title){

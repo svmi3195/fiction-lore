@@ -9,6 +9,16 @@ html, body {
   min-height: 100%;
 }
 
+/* content container */
+#main {
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* main menu */
 .menu {
   display: flex;
   flex-direction: column;
@@ -21,10 +31,7 @@ html, body {
   flex-direction: column;
 }
 
-#main {
-  padding: 5px;
-}
-
+/* main menu buttons */
 .menu button {
   padding: 7px;
   background: rgb(63, 65, 65);
@@ -32,4 +39,22 @@ html, body {
   border: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
+}
+
+/* menu with add, delete, edit buttons for separate items */
+.list-menu button {
+  background-color: rgb(63, 65, 65);
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+/* media queries*/
+@media only screen and (min-width: 700px) {
+  #main {
+    width: 700px;
+    margin-right: auto;
+  }
 }
