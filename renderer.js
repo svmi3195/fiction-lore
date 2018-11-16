@@ -33,6 +33,9 @@ function createAddBtn(category){
   const btn = window.document.createElement('button');
   btn.className = 'add-btn';
   btn.innerHTML = 'Add';
+  btn.addEventListener('click', function(){
+    createAddForm(category);
+  })
   return btn;
 }
 
@@ -142,6 +145,37 @@ function createItem(category, element){
   listMenu.className = 'list-menu';
   listMenu.append(createEditBtn());
   container.append(listMenu);
+}
+
+function createAddForm(category){
+  const container = window.document.getElementById('main');
+  const template = window.document.createElement('div');
+
+  const name = loc.name[lang];
+  const areal = loc.areal[lang];
+  const description = loc.description[lang];
+
+  let formString = '';
+
+  if(category == 'countries'){
+
+  }else if(category == 'bestiary'){
+    formString += '<form>';
+    formString += '<label>' + name + ': </label><br>';
+    formString += '<input type="text" name="name"><br>';
+    formString += '<label>' + areal + ': </label><br>';
+    formString += '<input type="text" name="name"><br>';
+    formString += '<label>' + description + ': </label><br>';
+    formString += '<textarea name="name"></textarea><br>';
+    formString += '</form>';
+  }else if(category == 'characters'){
+
+  }
+
+  template.innerHTML = formString;
+
+  container.innerHTML = '';
+  container.append(template);
 }
 
 function formatTitle(title){

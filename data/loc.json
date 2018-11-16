@@ -54,5 +54,17 @@
   "looks": {
     "en": "Looks",
     "ru": "Внешность"
+  },
+  "name": {
+    "en": "Name",
+    "ru": ""
+  },
+  "areal": {
+    "en": "Lives in",
+    "ru": ""
+  },
+  "description": {
+    "en": "Description",
+    "ru": ""
   }
 }
