@@ -154,11 +154,14 @@ function createAddForm(category){
   const name = loc.name[lang];
   const areal = loc.areal[lang];
   const description = loc.description[lang];
+  const age = loc.age[lang];
+  const parents = loc.parents[lang];
+  const looks = loc.looks[lang];
 
   let formString = '';
 
   if(category == 'countries'){
-
+    
   }else if(category == 'bestiary'){
     formString += '<form>';
     formString += '<label>' + name + ': </label><br>';
@@ -166,10 +169,21 @@ function createAddForm(category){
     formString += '<label>' + areal + ': </label><br>';
     formString += '<input type="text" name="name"><br>';
     formString += '<label>' + description + ': </label><br>';
-    formString += '<textarea name="name"></textarea><br>';
+    formString += '<textarea name="descripyion"></textarea><br>';
     formString += '</form>';
   }else if(category == 'characters'){
-
+    formString += '<form>';
+    formString += '<label>' + name + ': </label><br>';
+    formString += '<input type="text" name="name"><br>';    
+    formString += '<label>' + description + ': </label><br>';
+    formString += '<textarea name="description"></textarea><br>';
+    formString += '<label>' + age + ': </label><br>';
+    formString += '<input type="text" name="age"><br>';
+    formString += '<label>' + parents + ': </label><br>';
+    formString += '<input type="text" name="parents"><br>';
+    formString += '<label>' + looks + ': </label><br>';
+    formString += '<textarea name="looks"></textarea><br>';
+    formString += '</form>';
   }
 
   template.innerHTML = formString;

@@ -57,14 +57,14 @@
   },
   "name": {
     "en": "Name",
-    "ru": ""
+    "ru": "Название"
   },
   "areal": {
     "en": "Lives in",
-    "ru": ""
+    "ru": "Живет в"
   },
   "description": {
     "en": "Description",
-    "ru": ""
+    "ru": "Описание"
   }
 }
