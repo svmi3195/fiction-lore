@@ -161,7 +161,14 @@ function createAddForm(category){
   let formString = '';
 
   if(category == 'countries'){
-    
+    formString += '<form>';
+    formString += '<label>' + name + ': </label><br>';
+    formString += '<input type="text" name="name"><br>';    
+    formString += '<label>' + description + ': </label><br>';
+    formString += '<textarea name="description"></textarea><br>';
+    formString += '<label>' + ruler + ': </label><br>';
+    formString += '<input type="text" name="ruler"><br>';
+    formString += '</form>';
   }else if(category == 'bestiary'){
     formString += '<form>';
     formString += '<label>' + name + ': </label><br>';
