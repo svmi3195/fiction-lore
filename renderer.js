@@ -35,7 +35,7 @@ function createAddBtn(category){
   btn.innerHTML = 'Add';
   btn.addEventListener('click', function(){
     createAddForm(category);
-  })
+  });
   return btn;
 }
 
@@ -43,13 +43,16 @@ function createDeleteBtn(category){
   const btn = window.document.createElement('button');
   btn.className = 'delete-btn';
   btn.innerHTML = 'Delete';
+  btn.addEventListener('click', function(){
+    createDeleteForm(category);
+  });
   return btn;
 }
 
 function createEditBtn(category){
   const btn = window.document.createElement('button');
   btn.className = 'edit-btn';
-  btn.innerHTML = 'Edit';
+  btn.innerHTML = 'Edit'; 
   return btn;
 }
 
@@ -195,6 +198,20 @@ function createAddForm(category){
   }
 
   template.innerHTML = formString;
+
+  container.innerHTML = '';
+  container.append(template);
+}
+
+function createDeleteForm(category){
+  const container = window.document.getElementById('main');
+  const template = window.document.createElement('ul');
+
+  data[category].forEach(element => {
+    let li = window.document.createElement('li');
+    li.append(element.name);
+    template.append(li);
+  })
 
   container.innerHTML = '';
   container.append(template);
