@@ -210,8 +210,17 @@ function createDeleteForm(category){
   data[category].forEach(element => {
     let li = window.document.createElement('li');
     li.append(element.name);
+    var checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    checkbox.name = element.name;
+    li.append(checkbox);
     template.append(li);
   })
+
+  const confirm = window.document.createElement('button');
+  confirm.className = 'delete-btn'
+  confirm.innerHTML = 'Confirm';
+  template.append(confirm);
 
   container.innerHTML = '';
   container.append(template);

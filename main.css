@@ -42,7 +42,7 @@ html, body {
 }
 
 /* menu with add, delete, edit buttons for separate items */
-.list-menu button {
+.add-btn, .edit-btn, .delete-btn {
   background-color: rgb(63, 65, 65);
   color: #fff;
   padding: 5px;
