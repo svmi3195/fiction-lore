@@ -157,6 +157,7 @@ function createAddForm(category){
   const age = loc.age[lang];
   const parents = loc.parents[lang];
   const looks = loc.looks[lang];
+  const ruler = loc.ruler[lang];
 
   let formString = '';
 
