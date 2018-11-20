@@ -49,10 +49,13 @@ function createDeleteBtn(category){
   return btn;
 }
 
-function createEditBtn(category){
+function createEditBtn(element){
   const btn = window.document.createElement('button');
   btn.className = 'edit-btn';
-  btn.innerHTML = 'Edit'; 
+  btn.innerHTML = 'Edit';
+  btn.addEventListener('click', function(){
+    createEditForm(element);
+  });
   return btn;
 }
 
@@ -198,6 +201,28 @@ function createAddForm(category){
   }
 
   template.innerHTML = formString;
+
+  container.innerHTML = '';
+  container.append(template);
+}
+
+function createEditForm(element){
+  const container = window.document.getElementById('main');
+  const template = window.document.createElement('div');
+
+  const name = loc.name[lang];
+  const areal = loc.areal[lang];
+  const description = loc.description[lang];
+  const age = loc.age[lang];
+  const parents = loc.parents[lang];
+  const looks = loc.looks[lang];
+  const ruler = loc.ruler[lang];
+
+  const form = window.document.createElement('form');
+
+  
+
+  template.append(form);
 
   container.innerHTML = '';
   container.append(template);
