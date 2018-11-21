@@ -51,6 +51,18 @@ html, body {
   border-radius: 3px;
 }
 
+/* lists */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul button {
+  margin: 0 0 7px 7px;
+  font-size: 0.95rem;
+}
+
 /* media queries*/
 @media only screen and (min-width: 700px) {
   #main {
